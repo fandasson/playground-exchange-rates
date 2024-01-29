@@ -1,7 +1,9 @@
 # Exchange rates (pet project)
 
 ## Requirements
+
 Create a simple React app (don’t use NextJS please), which:
+
 1. When it starts, retrieve the latest currency exchange rates from the Czech National Bank.
 
 API URL: https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/daily.txt
