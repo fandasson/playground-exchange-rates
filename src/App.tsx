@@ -1,5 +1,7 @@
+import { StoreProvider } from "store/StoreProvider.tsx";
+
 const App = () => {
-    return <>Hello, World 👋</>;
+    return <StoreProvider>Hello, World 👋</StoreProvider>;
 };
 
 export { App };
