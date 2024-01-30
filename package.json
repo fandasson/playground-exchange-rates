@@ -8,6 +8,7 @@
         "dev:local": "vite",
         "dev:vercel": "vercel dev",
         "build": "tsc && vite build",
+        "test": "vitest",
         "lint:check": "eslint --cache --quiet \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint --cache --fix \"src/**/*.{ts,tsx}\"",
         "format:check": "prettier --cache --check --log-level warn .",
@@ -34,10 +35,12 @@
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
+        "lint-staged": "^15.2.0",
         "prettier": "^3.2.4",
         "typescript": "^5.2.2",
         "vite": "^5.0.8",
-        "vite-tsconfig-paths": "^4.3.1"
+        "vite-tsconfig-paths": "^4.3.1",
+        "vitest": "^1.2.2"
     },
     "volta": {
         "node": "18.19.0"
