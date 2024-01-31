@@ -6,7 +6,11 @@ import { QueryClient, QueryFunction } from "@tanstack/react-query";
  * Using it simplifies calling useQuery hook
  */
 const defaultQueryFn: QueryFunction = async () => {
-    const response = await fetch(import.meta.env.VITE_API_URL);
+    const url = import.meta.env.VITE_APP_API_URL;
+    if (!url) {
+        throw new Error("`VITE_APP_API_URL` env variable not set. Check .env file or README.md for more information");
+    }
+    const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Network response failed: ${response.status} ${response.statusText}`);
     }
