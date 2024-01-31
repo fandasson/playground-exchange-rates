@@ -20,8 +20,6 @@
         "strict": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
     },
     "include": ["index.d.ts", "src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules", "build", "dist/"],
