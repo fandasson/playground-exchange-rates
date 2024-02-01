@@ -33,3 +33,4 @@ dist-ssr
 tsconfig.tsbuildinfo
 .cache
 .stylelintcache
+.vercel

@@ -1,11 +1,12 @@
 {
-    "name": "playground-exchange-rate-client",
+    "name": "playground-exchange-rate",
     "private": true,
     "version": "0.1.0",
     "type": "module",
     "author": "Frantisek Pac",
     "scripts": {
-        "dev": "vite",
+        "dev:local": "vite",
+        "dev:vercel": "vercel dev",
         "build": "tsc && vite build",
         "lint:check": "eslint --cache --quiet \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint --cache --fix \"src/**/*.{ts,tsx}\"",
@@ -13,6 +14,8 @@
         "format:fix": "prettier --cache --write --log-level warn ."
     },
     "dependencies": {
+        "@vercel/node": "^3.0.17",
+        "node-fetch": "^3.3.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
