@@ -4,6 +4,7 @@ import { ListItem } from "components/List/ListItem";
 import { ListLayout } from "components/List/ListLayout";
 import { Rate } from "components/List/Rate";
 import { getFlagEmoji } from "components/List/list.helpers";
+import { Loading } from "components/ui";
 import { ExchangeRate } from "store/api/types";
 
 type Props = {
@@ -13,8 +14,8 @@ type Props = {
 const List = (props: Props) => {
     const { exchangeRates } = props;
 
-    if (!exchangeRates) {
-        return <div>loading...</div>;
+    if (!exchangeRates || exchangeRates.length === 0) {
+        return <Loading height={"20rem"} />;
     }
 
     return (
