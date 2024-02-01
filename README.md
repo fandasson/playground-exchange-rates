@@ -16,7 +16,6 @@ Documentation: https://www.cnb.cz/en/faq/Format-of-the-foreign-exchange-market-r
 6. Tech stack: React (+ Hooks), TypeScript, Styled Components, React Query.
    Overall: Keep the code simple and the UI nice and easy to use for the user.
 
-
 ## Local development
 
 1. Install dependencies
