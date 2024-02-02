@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --grey200: #ececee;
     --grey600: #757575;
     --indigo: #6360e1;
-    --medium-sea-green: #00a857;
+    --indigo-bg: #6360e133;
     --red: #df0043;
     --white: white;
     --white-smoke: #f8f7fa;

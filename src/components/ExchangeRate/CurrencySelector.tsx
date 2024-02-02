@@ -1,5 +1,4 @@
-import { ChangeEvent } from "react";
-
+import { Select } from "components/ui/Select";
 import { ExchangeRate } from "store/api/types";
 
 type Props = {
@@ -7,29 +6,22 @@ type Props = {
     onSelect: (currency: ExchangeRate) => void;
 };
 const CurrencySelector = (props: Props) => {
-    if (props.currencies.length === 0) {
+    const { currencies, onSelect } = props;
+
+    if (currencies.length === 0) {
         return null;
     }
 
-    const onSelect = (e: ChangeEvent<HTMLSelectElement>) => {
-        const code = e.target.value;
-        const currency = props.currencies.find((currency) => currency.code === code);
+    const items = currencies.map((currency) => ({ label: currency.code, value: currency.code }));
+
+    const handleSelect = (value: string) => {
+        const currency = currencies.find((currency) => currency.code === value);
         if (currency) {
-            props.onSelect(currency);
+            onSelect(currency);
         }
     };
-    return (
-        <select onChange={onSelect}>
-            <option value={""}>-- Select currency --</option>
-            {props.currencies.map((currency) => {
-                return (
-                    <option key={currency.code} value={currency.code}>
-                        {currency.code}
-                    </option>
-                );
-            })}
-        </select>
-    );
+
+    return <Select onChange={handleSelect} items={items} placeholder={"👉 Select currency"} />;
 };
 
 export { CurrencySelector };
