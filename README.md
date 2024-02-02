@@ -16,17 +16,10 @@ Documentation: https://www.cnb.cz/en/faq/Format-of-the-foreign-exchange-market-r
 6. Tech stack: React (+ Hooks), TypeScript, Styled Components, React Query.
    Overall: Keep the code simple and the UI nice and easy to use for the user.
 
-## Local development
 
-1. Install dependencies
-
-```bash
-yarn install
-```
-
-2. Copy `.env.example` to `.env` and fill in the values
-3. Start the app
-
-```bash
-yarn dev
-```
+## Nice to have features to implement
+- [ ] Allow local development without Vercel by adding local server to fetch data from API (now the `vercel dev` needs to be run to use serverless function)
+- [ ] Add decimal format into `AmountInput` and format input while user type
+- [ ] On click on `ListItem` select currency and scroll on form
+- [ ] Add calculated rates to each currency in the `List` (user type ones and see calculated rates for all)
+- [ ] Improve and unify naming of components (eg names ExchangeRate, Currency)
