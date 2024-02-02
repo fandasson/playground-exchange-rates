@@ -1,5 +1,7 @@
 import { ChangeEvent, useCallback, useState } from "react";
 
+import { Input } from "components/ui/Input";
+
 type Props = {
     onChange: (amount: number | null) => void;
 };
@@ -22,7 +24,15 @@ const AmountInput = (props: Props) => {
         [onChange],
     );
 
-    return <input type="number" value={amount} onChange={handleChange} />;
+    return (
+        <Input
+            type="number"
+            value={amount}
+            onChange={handleChange}
+            autoFocus={true}
+            onFocus={(e) => e.target.select()}
+        />
+    );
 };
 
 export { AmountInput };
