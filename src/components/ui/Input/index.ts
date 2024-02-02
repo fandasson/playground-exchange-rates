@@ -11,4 +11,8 @@ export const Input = styled.input`
     letter-spacing: 0.03rem;
     color: var(--indigo);
     font-size: 1.8rem;
+
+    @media (max-width: 566px) {
+        max-width: 150px;
+    }
 `;

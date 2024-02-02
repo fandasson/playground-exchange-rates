@@ -17,7 +17,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: var(--white-smoke);
-    padding: 0 2rem;
+    // hacked for simplicity to to compensate Radix-UI styles for the Select component
+    padding: 0 2rem !important;
     font-size: 16px;
     font-family: sans-serif;
   }
